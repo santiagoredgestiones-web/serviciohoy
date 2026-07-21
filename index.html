@@ -162,34 +162,32 @@ h1,h2,h3{
 }
 
 .ticket h1{
+  --base: clamp(2.2rem, 9vw, 2.4rem);
   font-family: "Oswald";
   text-align:center;
   margin-top:0px;
   white-space: nowrap;
   padding-bottom: 1em;
 }
+
 h1 span.first{
-font-size:clamp(2.4rem,10vw,2.8rem);
+  font-size: var(--base);
   color:var(--ink);
   border-bottom: 0.15em solid var(--green);
-   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.25);
   display: inline-block;
   -webkit-text-stroke: 0.07em rgba(0,0,0,0.18);
-  text-shadow:
-    0 0.03em 0 rgba(0,0,0,0.08),
-    0 0.03em 0.13em rgba(0,0,0,0.12);
+  filter: drop-shadow(0 0.03em 0.1em rgba(0,0,0,0.15));
 }
+
 h1 span.second{
-  font-weight: 600;
-  font-size:clamp(2.6rem,11vw,6rem);
+   font-size: calc(var(--base) * 2.1); 
   color:var(--green);
   display: inline-block;
   margin-left: -0.06em;
   transform: translateY(0.45em) rotate(-1deg);
-  -webkit-text-stroke: 0.07em rgba(0,0,0,0.18);
-  text-shadow:
-    0 0.03em 0 rgba(0,0,0,0.08),
-    0 0.03em 0.13em rgba(0,0,0,0.12);
+  -webkit-text-stroke: 0.03em rgba(0,0,0,0.18);
+  filter: drop-shadow(0 0.01em 0.01em rgba(0,0,0,0.15));
 }
 .ticket .sub{
   text-align:center;
