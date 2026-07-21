@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+
 
 <style>
 /* ============ TOKENS ============ */
@@ -135,7 +135,7 @@ h1,h2,h3{
 .hero{padding:38px 0 30px;}
 .ticket{
   position:relative;
-  background: url(images/fondo.png) no-repeat #fff;
+  background: url(images/fondo.png)no-repeat #fff;
   background-position: top center;
   border:1.5px solid var(--ink);
   padding:300px 22px 10px; 
@@ -160,33 +160,36 @@ h1,h2,h3{
   letter-spacing:0.08em;
   margin-bottom:14px;
 }
+
 .ticket h1{
   font-size:clamp(2.4rem,10vw,2.8rem);
-  font-family: "Story Script", cursive;
-  text-align:center;   margin-top:0px;
+  font-family: "Oswald";
+  text-align:center;
+  margin-top:0px;
   color:var(--ink);
-  white-space: nowrap; /* evita que se separen en mobile */
-   padding-bottom: 1em;
+  white-space: nowrap;
+  padding-bottom: 1em;
 }
-
 h1 span.first{
-  border-bottom: 8px solid var(--green);
+  border-bottom: 0.15em solid var(--green);
+   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.25);
   display: inline-block;
+  -webkit-text-stroke: 0.07em rgba(0,0,0,0.18);
+  text-shadow:
+    0 0.03em 0 rgba(0,0,0,0.08),
+    0 0.03em 0.13em rgba(0,0,0,0.12);
 }
-
 h1 span.second{
   font-weight: 600;
   font-size:clamp(2.6rem,11vw,6rem);
-  font-style: italic;
   color:var(--green);
   display: inline-block;
-  margin-left: -28px; /* achica o agranda para "pegar" las palabras */
-  transform: translateY(42px) rotate(-1deg); /* baja/sube la H hasta que caiga en la línea */
-  -webkit-text-stroke: 4px rgba(0,0,0,0.18);
+  margin-left: -0.06em;
+  transform: translateY(0.45em) rotate(-1deg);
+  -webkit-text-stroke: 0.07em rgba(0,0,0,0.18);
   text-shadow:
-    0 2px 0 rgba(0,0,0,0.08),
-    0 2px 8px rgba(0,0,0,0.12);
-  
+    0 0.03em 0 rgba(0,0,0,0.08),
+    0 0.03em 0.13em rgba(0,0,0,0.12);
 }
 .ticket .sub{
   text-align:center;
